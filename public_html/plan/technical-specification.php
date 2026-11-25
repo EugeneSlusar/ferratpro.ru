@@ -1,10 +1,10 @@
+<?php require dirname(__DIR__, 2) . '/plan-auth.php'; ?>
 <!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
-    <script src="../assets/plan-auth.js"></script>
     <title>Техническое задание — FerratPro</title>
     <link rel="stylesheet" href="../assets/plan.css" />
   </head>
@@ -14,7 +14,7 @@
         <div><p class="eyebrow">ВНУТРЕННИЙ ДОКУМЕНТ · ВЕРСИЯ 1.0 · 25.11.2026</p><h1>Техническое задание</h1></div>
         <p class="brand">FERRAT<span>PRO</span></p>
       </header>
-      <nav class="document-links" aria-label="Документы проекта"><a href="./">План работ</a><a href="research.html">Исследование</a><span>Техническое задание</span></nav>
+      <nav class="document-links" aria-label="Документы проекта"><a href="./">План работ</a><a href="research.php">Исследование</a><span>Техническое задание</span></nav>
 
       <section class="group">
         <h3>1. Назначение проекта</h3>

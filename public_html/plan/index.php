@@ -1,7 +1,8 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow, noarchive, nosnippet" /><script src="../assets/plan-auth.js"></script><title>План и акт работ FerratPro</title><link rel="stylesheet" href="../assets/plan.css" /></head><body><main>
+<?php require dirname(__DIR__, 2) . '/plan-auth.php'; ?>
+<!doctype html><html lang="ru"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow, noarchive, nosnippet" /><title>План и акт работ FerratPro</title><link rel="stylesheet" href="../assets/plan.css" /></head><body><main>
 <header class="top"><div><p class="eyebrow">ВНУТРЕННИЙ ДОКУМЕНТ · 25.11.2026</p><h1>План и акт работ FerratPro</h1></div><p class="brand">FERRAT<span>PRO</span></p></header>
 <section class="summary"><div><span>Выполнено</span><b>2 часа 45 минут</b></div><div><span>Запланировано</span><b>47 часов 15 минут</b></div><div><span>Всего по проекту</span><b>50 часов</b></div></section>
-<nav class="document-links" aria-label="Документы проекта"><span>План и акт работ</span><a href="research.html">Исследование</a><a href="technical-specification.html">Техническое задание</a></nav>
+<nav class="document-links" aria-label="Документы проекта"><span>План и акт работ</span><a href="research.php">Исследование</a><a href="technical-specification.php">Техническое задание</a></nav>
 <p>Выполненные и запланированные работы собраны в общие тематические группы. Галочка означает выполненную работу, прочерк — задачу из плана.</p>
 <section id="planned" class="group"><h2>План работ</h2><h3>1. Аналитика и структура сайта — 9 ч. запланировано</h3><table class="work-table"><thead><tr><th>Выполнено</th><th>№</th><th>Работа</th><th>Часы</th></tr></thead><tbody>
 <tr class="is-completed"><td class="status" aria-label="Выполнено">✓</td><td>4</td><td>Исследование конкурентов, позиционирование FerratPro и формулировка УТП</td><td>15 минут</td></tr>
