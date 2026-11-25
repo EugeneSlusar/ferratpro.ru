@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FerratPro — производство и подбор деталей выхлопной системы для LADA в Тольятти." />
+    <title>FerratPro — детали выхлопной системы для LADA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#">FERRAT<span>PRO</span></a>
+      <nav aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#production">Производство</a>
+        <a href="#wholesale">Оптовикам</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="phone" href="#contacts">Контакты →</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ТОЛЬЯТТИ · ПРОИЗВОДСТВО ВЫХЛОПНЫХ СИСТЕМ</p>
+          <h1>Глушители и детали выхлопной системы для <em>LADA</em></h1>
+          <p class="lead">Подберём деталь по модели автомобиля, изготовим при необходимости и поможем с установкой.</p>
+          <div class="actions">
+            <a class="button" href="#selection">Подобрать деталь</a>
+            <a class="button secondary" href="#catalog">Смотреть каталог</a>
+          </div>
+          <ul class="facts">
+            <li>Собственное производство</li>
+            <li>Подбор по модели авто</li>
+            <li>Отправка по России</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-label="Иллюстрация детали выхлопной системы">
+          <div class="pipe pipe-one"></div><div class="pipe pipe-two"></div><div class="muffler"></div>
+          <span>FERRATPRO</span>
+        </div>
+      </section>
+
+      <section id="selection" class="selection">
+        <p class="eyebrow">БЫСТРЫЙ ПОДБОР</p>
+        <h2>Не уверены, какая деталь подойдёт?</h2>
+        <p>Оставьте данные автомобиля — уточним совместимость, наличие и цену.</p>
+        <form onsubmit="return submitSelection(event)">
+          <label>Модель LADA <input required name="model" placeholder="Например, Гранта" /></label>
+          <label>Год выпуска <input required name="year" inputmode="numeric" placeholder="Например, 2018" /></label>
+          <label>Нужная деталь <select name="part"><option>Глушитель</option><option>Резонатор</option><option>Гофра</option><option>Пламегаситель</option><option>Нужна консультация</option></select></label>
+          <label>Телефон или мессенджер <input required name="contact" placeholder="+7 (___) ___-__-__" /></label>
+          <button class="button" type="submit">Получить подбор</button>
+        </form>
+        <p class="form-note">Демо-форма: перед запуском подключите обработчик заявок и добавьте согласие на обработку данных.</p>
+      </section>
+
+      <section id="catalog" class="section">
+        <p class="eyebrow">КАТАЛОГ</p><h2>Основные категории</h2>
+        <div class="cards">
+          <article><b>01</b><h3>Глушители</h3><p>Штатные и усиленные решения для LADA.</p></article>
+          <article><b>02</b><h3>Резонаторы</h3><p>Подбор по модели, году и конфигурации выхлопа.</p></article>
+          <article><b>03</b><h3>Гофры и пламегасители</h3><p>Ремонтные и универсальные элементы.</p></article>
+          <article><b>04</b><h3>Изготовление на заказ</h3><p>Решения для нестандартных задач.</p></article>
+        </div>
+        <p class="placeholder">Добавьте 20–30 реальных товарных карточек с фото, артикулом, совместимостью, ценой и наличием.</p>
+      </section>
+
+      <section id="production" class="dark-section">
+        <p class="eyebrow">ПОЧЕМУ FERRATPRO</p>
+        <h2>Не просто продаём — производим и подбираем</h2>
+        <div class="steps">
+          <div><span>01</span><h3>Уточняем автомобиль</h3><p>Модель, год, двигатель и конфигурацию выхлопа.</p></div>
+          <div><span>02</span><h3>Подбираем решение</h3><p>Проверяем совместимость, наличие и срок изготовления.</p></div>
+          <div><span>03</span><h3>Устанавливаем или отправляем</h3><p>Самовывоз и установка в Тольятти, доставка по России.</p></div>
+        </div>
+      </section>
+
+      <section id="wholesale" class="section wholesale">
+        <p class="eyebrow">СТО И ОПТОВИКАМ</p><h2>Сотрудничаем с сервисами и магазинами</h2>
+        <p>Подготовим ассортимент под спрос, изготовим партии и предоставим условия для регулярных закупок.</p>
+        <a class="button" href="#contacts">Запросить условия</a>
+      </section>
+
+      <section id="contacts" class="contacts">
+        <div><p class="eyebrow">КОНТАКТЫ</p><h2>Подберём деталь для вашего автомобиля</h2>
+          <p><strong>Телефон:</strong> добавить реальный номер</p>
+          <p><strong>WhatsApp / Telegram:</strong> добавить рабочие ссылки</p>
+          <p><strong>Адрес:</strong> добавить адрес точки и карту</p>
+          <p><strong>График:</strong> добавить часы работы</p>
+        </div>
+        <div class="map">Здесь будет Яндекс.Карта<br /><small>Добавьте реальный адрес точки</small></div>
+      </section>
+    </main>
+    <footer>© FerratPro · Тестовая версия сайта · <a href="redmi.md">План и исследование</a></footer>
+    <script>
+      function submitSelection(event) {
+        event.preventDefault();
+        alert('Спасибо! В тестовой версии форма не отправляет данные. Подключите CRM, почту или мессенджер перед запуском.');
+        return false;
+      }
+    </script>
+  </body>
+</html>
