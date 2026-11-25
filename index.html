@@ -56,14 +56,10 @@
       </section>
 
       <section id="catalog" class="section">
-        <p class="eyebrow">КАТАЛОГ</p><h2>Основные категории</h2>
-        <div class="cards">
-          <article><b>01</b><h3>Глушители</h3><p>Штатные и усиленные решения для LADA.</p></article>
-          <article><b>02</b><h3>Резонаторы</h3><p>Подбор по модели, году и конфигурации выхлопа.</p></article>
-          <article><b>03</b><h3>Гофры и пламегасители</h3><p>Ремонтные и универсальные элементы.</p></article>
-          <article><b>04</b><h3>Изготовление на заказ</h3><p>Решения для нестандартных задач.</p></article>
-        </div>
-        <p class="placeholder">Добавьте 20–30 реальных товарных карточек с фото, артикулом, совместимостью, ценой и наличием.</p>
+        <p class="eyebrow">КАТАЛОГ</p><h2>Товары Ferrat на Ozon</h2>
+        <p class="catalog-intro">Цены и ассортимент синхронизированы с витриной Ozon на момент выгрузки. Нажмите на фото, чтобы листать изображения товара.</p>
+        <div id="product-grid" class="product-grid"></div>
+        <p class="placeholder">Цены на маркетплейсе могут меняться. Актуальная цена и наличие — на Ozon.</p>
       </section>
 
       <section id="production" class="dark-section">
@@ -93,7 +89,39 @@
       </section>
     </main>
     <footer>© FerratPro · Тестовая версия сайта · <a href="README.md">План и исследование</a></footer>
+    <script src="catalog.js"></script>
     <script>
+      const escapeHtml = (value) => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+      const productGrid = document.querySelector('#product-grid');
+      productGrid.innerHTML = window.FERRAT_PRODUCTS.map((product, productIndex) => `
+        <article class="product-card">
+          <div class="product-gallery" data-gallery="${productIndex}">
+            <img src="${product.images[0]}" alt="${escapeHtml(product.name)}" loading="lazy" />
+            ${product.images.length > 1 ? `<button class="gallery-button previous" aria-label="Предыдущее фото">‹</button><button class="gallery-button next" aria-label="Следующее фото">›</button><span class="gallery-count">1 / ${product.images.length}</span>` : ''}
+          </div>
+          <div class="product-body">
+            <p class="article">Артикул Ozon: ${product.id}</p>
+            <h3>${escapeHtml(product.name)}</h3>
+            <div class="prices">${product.oldPrice ? `<del>${product.oldPrice}</del>` : ''}<strong>${product.price}</strong></div>
+            <a class="ozon-link" href="${product.ozonUrl}" target="_blank" rel="noopener">Купить на Ozon ↗</a>
+          </div>
+        </article>`).join('');
+
+      document.querySelectorAll('.product-gallery').forEach(gallery => {
+        const product = window.FERRAT_PRODUCTS[gallery.dataset.gallery];
+        if (product.images.length < 2) return;
+        let current = 0;
+        const image = gallery.querySelector('img');
+        const count = gallery.querySelector('.gallery-count');
+        const show = step => {
+          current = (current + step + product.images.length) % product.images.length;
+          image.src = product.images[current];
+          count.textContent = `${current + 1} / ${product.images.length}`;
+        };
+        gallery.querySelector('.previous').addEventListener('click', () => show(-1));
+        gallery.querySelector('.next').addEventListener('click', () => show(1));
+      });
+
       function submitSelection(event) {
         event.preventDefault();
         alert('Спасибо! В тестовой версии форма не отправляет данные. Подключите CRM, почту или мессенджер перед запуском.');
