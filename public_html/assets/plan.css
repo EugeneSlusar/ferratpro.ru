@@ -9,9 +9,9 @@ h1 { margin:0; font-size:clamp(32px,5vw,55px); letter-spacing:-2px; line-height:
 h2 { margin:50px 0 15px; font-size:27px; letter-spacing:-1px; }
 .summary { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:25px 0; }
 .summary div { padding:15px; background:var(--paper); border:1px solid var(--line); }.summary span { display:block; color:var(--muted); font-size:12px; }.summary b { font-size:25px; }
-.document-links { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0; }.document-links a { padding:8px 11px; border:1px solid var(--line); color:var(--ink); background:var(--paper); font-size:13px; text-decoration:none; }.document-links a:hover { background:var(--accent); }
+.document-links { display:flex; flex-wrap:wrap; column-gap:12px; row-gap:12px; margin:22px 0; }.document-links a,.document-links span { padding:8px 11px; border:1px solid var(--line); color:var(--ink); background:var(--paper); font-size:13px; text-decoration:none; }.document-links a:hover { background:var(--accent); }.document-links span { background:var(--accent); font-weight:bold; }
 .group { margin-top:35px; }
 .group h3 { margin:0; padding:12px 14px; background:var(--ink); color:white; font-size:16px; }
 table { width:100%; border-collapse:collapse; background:var(--paper); } th,td { padding:11px 12px; border:1px solid var(--line); text-align:left; vertical-align:top; } th { background:#e4e9e4; font-size:13px; } .work-table td:last-child,.work-table th:last-child { width:90px; text-align:right; white-space:nowrap; } .total { font-weight:bold; background:#f6f8f5; }
 .note { margin-top:45px; color:var(--muted); font-size:13px; }
-@media(max-width:600px) { main { padding:32px 12px; }.top { display:block; }.brand { margin-bottom:25px; }.summary { grid-template-columns:1fr; } table { font-size:13px; } th,td { padding:8px; } }
+@media(max-width:600px) { main { padding:32px 12px; }.top { display:block; }.brand { margin-bottom:25px; }.summary { grid-template-columns:1fr; } table { table-layout:fixed; font-size:13px; } th,td { padding:8px; overflow-wrap:anywhere; word-break:break-word; } }
